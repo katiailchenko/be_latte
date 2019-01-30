@@ -1,0 +1,33 @@
+section.menu-price
+  div.container
+    div.row.wrap
+      h2.title.title_upper.menu-price__title.cell Menu
+    div.row.menu-price__block.price-block
+      div.price-block__item.cell
+        div.price-block__title.price-block__title_1
+          h2.title.title_upper Coffee
+        div.price-block__goods.goods
+          +good({name: 'Latte', price: '$3.00'})
+          +good({name: 'Mocha', price: '$3.25'})
+          +good({name: 'Espresso', price: '$3.75'})
+          +good({name: 'Capuccino', price: '$3.00'})
+      div.price-block__item.cell
+        div.price-block__title.price-block__title_2
+          h2.title.title_upper Tea
+        div.price-block__goods.goods
+          +good({name: 'Iced tea', price: '$2.75'})
+          +good({name: 'Cold brew', price: '$3.50'})
+          +good({name: 'Jasmine green', price: '$3.75'})
+          +good({name: 'Peppermint Herbal', price: '$3.25'})
+      div.price-block__item.cell
+        div.price-block__title.price-block__title_3
+          h2.title.title_upper Desserts
+        div.price-block__goods.goods
+          +good({name: 'Tiramisu', price: '$3.75'})
+          +good({name: 'Cheese cake', price: '$3.25'})
+          +good({name: 'Black forest', price: '$3.75'})
+          +good({name: 'Brownie', price: '$3.00'})
+    div.row.menu-price_bot
+      img.img-decoration(src="img/cup.png", alt="")
+      div.menu-price__button
+        +button({title: 'See full menu'})

@@ -1,0 +1,17 @@
+mixin menu-link(props)
+  - var {title, href="#"} = props
+  li.menu__link
+    a(href=href)= title
+
+mixin button(props)
+  - var {href='#', title} = props
+  div.wrapper-button
+    a.btn(href=href)= title
+      svg
+        rect
+
+mixin good(props)
+  - var {name, price} = props
+  div.goods__item
+    div.goods__name= name
+    div.goods__price= price

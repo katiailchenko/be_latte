@@ -1,0 +1,438 @@
+@charset "UTF-8";
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, html, i, iframe, img, ins, kbd, label, legend, li, main, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video, xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+html, body {
+  height: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+b, strong {
+  font-weight: bold; }
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; }
+
+ol, ul {
+  list-style: none; }
+
+li {
+  display: list-item; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th, td, caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left; }
+
+q {
+  quotes: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+sub, sup, small {
+  font-size: 75%; }
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+svg {
+  overflow: hidden; }
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?34189545");
+  src: url("../font/fontello.eot?34189545#iefix") format("embedded-opentype"), url("../font/fontello.woff2?34189545") format("woff2"), url("../font/fontello.woff?34189545") format("woff"), url("../font/fontello.ttf?34189545") format("truetype"), url("../font/fontello.svg?34189545#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?34189545#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-twitter:before {
+  content: '\f099'; }
+
+/* '' */
+.icon-facebook:before {
+  content: '\f09a'; }
+
+/* '' */
+.icon-instagram:before {
+  content: '\f31e'; }
+
+/* '' */
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box; }
+
+body {
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  color: #28211f;
+  font-size: 16px; }
+
+.container {
+  padding: 0 20px;
+  max-width: 1270px;
+  margin: 0 auto;
+  width: 100%; }
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -20px;
+  margin-right: -20px; }
+
+.cell {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #2f2f2f;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 1px; }
+  .title_gold {
+    color: #f5d76e; }
+  .title_upper {
+    text-transform: uppercase; }
+
+.wrapper-button {
+  width: 180px; }
+  .wrapper-button .btn {
+    display: block;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative; }
+    .wrapper-button .btn:hover rect {
+      stroke: #f5d76e;
+      stroke-dasharray: 180px 0 50px 0 180px 0 50px 0; }
+  .wrapper-button svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    .wrapper-button svg rect {
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+      stroke: #f5d76e;
+      stroke-width: 6px;
+      stroke-dasharray: 10px 160px 20px 35px 20px 160px 20px 35px 10px;
+      transition: .5s stroke-dasharray, stroke .5s; }
+
+.img-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.header {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3; }
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative; }
+  .menu__left {
+    margin-right: 100px; }
+  .menu__right {
+    margin-left: 100px; }
+  .menu__link {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700; }
+    .menu__link a {
+      transition: color .3s, text-shadow .4s; }
+      .menu__link a:hover {
+        color: #f5d76e;
+        text-shadow: 0 0 50px #f5d76e; }
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.welcome {
+  min-height: 800px;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .welcome::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .welcome__content {
+    z-index: 2;
+    margin-left: 160px;
+    width: 40%; }
+  .welcome .row {
+    padding-top: 350px; }
+  .welcome__title {
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 20px; }
+  .welcome__descr p {
+    color: #fff;
+    line-height: 1.5em;
+    margin-bottom: 40px; }
+
+.so-good {
+  background-color: #fff; }
+  .so-good .row {
+    justify-content: center;
+    position: relative; }
+  .so-good__content {
+    width: 65%;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 120px; }
+  .so-good__title {
+    margin-bottom: 35px;
+    padding-bottom: 5px; }
+    .so-good__title strong {
+      font-weight: 900;
+      border-bottom: 1px solid; }
+  .so-good__text {
+    line-height: 1.5em; }
+
+.menu-price {
+  background-color: #fff; }
+  .menu-price .row.wrap {
+    justify-content: center;
+    padding-top: 80px; }
+  .menu-price__button {
+    margin: 0 auto; }
+    .menu-price__button a.btn {
+      color: #000; }
+  .menu-price_bot {
+    padding-bottom: 110px;
+    position: relative; }
+
+.price-block {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 60px;
+  margin-bottom: 60px; }
+  .price-block__item {
+    width: calc(33.333% - 20px*2); }
+    .price-block__item:hover h2::before {
+      background-color: rgba(245, 215, 110, 0.8); }
+  .price-block__title {
+    height: 295px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .price-block__title h2 {
+      line-height: 295px;
+      z-index: 2;
+      position: relative; }
+      .price-block__title h2::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: "";
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: -1;
+        transition: background-color .4s; }
+    .price-block__title_1 {
+      background-image: url(../img/img_1.jpg); }
+    .price-block__title_2 {
+      background-image: url(../img/img_2.jpg); }
+    .price-block__title_3 {
+      background-image: url(../img/img_3.jpg); }
+
+.goods {
+  margin-top: 40px; }
+  .goods__item {
+    display: flex;
+    width: 60%;
+    margin: 0 auto; }
+  .goods__name {
+    width: 70%;
+    line-height: 2em;
+    font-weight: 700; }
+  .goods__price {
+    width: 30%;
+    text-align: right;
+    line-height: 2em; }
+
+.testimonials {
+  background-color: #fff; }
+  .testimonials .row {
+    justify-content: center;
+    position: relative; }
+  .testimonials__title {
+    padding-top: 75px; }
+
+.testimonials-block {
+  margin-top: 60px;
+  margin-bottom: 120px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap; }
+  .testimonials-block__img {
+    width: 65%; }
+    .testimonials-block__img .img-wrap {
+      position: relative;
+      padding-top: 52%; }
+      .testimonials-block__img .img-wrap img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%; }
+  .testimonials-block__slider {
+    width: 35%;
+    background-color: #39312f; }
+
+.testimonials-slider {
+  position: relative; }
+  .testimonials-slider__item {
+    margin-top: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .testimonials-slider__item-content {
+    width: 65%;
+    text-align: center; }
+  .testimonials-slider__photo {
+    display: flex;
+    justify-content: center; }
+    .testimonials-slider__photo .photo-wrap {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative; }
+      .testimonials-slider__photo .photo-wrap img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover; }
+  .testimonials-slider__person-name {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px; }
+  .testimonials-slider__person-text {
+    color: #fff;
+    line-height: 1.5em; }
+
+.slider-toggles {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.wrapper-slide {
+  display: flex;
+  align-items: center; }
+
+.slick-dots {
+  display: flex; }
+  .slick-dots li:not(:last-child) {
+    margin-right: 10px; }
+  .slick-dots li button {
+    font-size: 0;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color .4s, border-color .4s;
+    outline: none; }
+  .slick-dots li.slick-active button {
+    background-color: transparent;
+    border-color: #fff; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,70 @@
+.welcome {
+  min-height: 800px;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#000, .5);
+  }
+
+  &__content {
+    z-index: 2;
+    margin-left: 160px;
+    width: 40%;
+  }
+
+  .row {
+    padding-top: 350px;
+  }
+
+  &__title {
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  &__descr p {
+    color: #fff;
+    line-height: 1.5em;
+    margin-bottom: 40px;
+  }
+}
+
+.so-good {
+  background-color: #fff;
+
+  .row {
+    justify-content: center;
+    position: relative;
+  }
+
+  &__content {
+    width: 65%;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 120px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    padding-bottom: 5px;
+
+    strong {
+      font-weight: 900;
+      border-bottom: 1px solid;
+    }
+  }
+
+  &__text {
+    line-height: 1.5em;
+  }
+}

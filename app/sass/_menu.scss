@@ -1,0 +1,94 @@
+.menu-price {
+  background-color: #fff;
+
+  .row.wrap {
+    justify-content: center;
+    padding-top: 80px;
+  }
+
+  &__button {
+    margin: 0 auto;
+    
+    a.btn {
+      color: #000;
+    }
+  }
+
+  &_bot {
+    padding-bottom: 110px;
+    position: relative;
+  }
+}
+
+.price-block {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  &__item {
+    @include cell-width(33.333%);
+
+    &:hover h2::before {
+      background-color: rgba($c-main, .8);
+    }
+  }
+
+  &__title {
+    height: 295px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+      line-height: 295px;
+      z-index: 2;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: "";
+        background-color: rgba(#fff, .7);
+        z-index: -1;
+        transition: background-color .4s;
+      }
+    }
+
+    &_1 {
+      background-image: url(../img/img_1.jpg);
+    }
+
+    &_2 {
+      background-image: url(../img/img_2.jpg);
+    }
+
+    &_3 {
+      background-image: url(../img/img_3.jpg);
+    }
+  }
+}
+
+.goods {
+  margin-top: 40px;
+
+  &__item {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &__name {
+    width: 70%;
+    line-height: 2em;
+    font-weight: 700;
+  }
+
+  &__price {
+    width: 30%;
+    text-align: right;
+    line-height: 2em;
+  }
+}

@@ -1,0 +1,9 @@
+@mixin if-smaller-than($width) {
+  @media screen and (max-width: $width - 1px) {
+    @content;
+  }
+}
+
+@mixin cell-width($width) {
+  width: calc(#{$width} - #{$grid-gap}*2);
+}

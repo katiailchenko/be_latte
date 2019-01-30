@@ -1,0 +1,134 @@
+.testimonials {
+  background-color: #fff;
+
+  .row {
+    justify-content: center;
+    position: relative;
+  }
+
+  &__title {
+    padding-top: 75px;
+  }
+}
+
+.testimonials-block {
+  margin-top: 60px;
+  margin-bottom: 120px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+
+  &__img {
+    width: 65%;
+
+    .img-wrap{
+      position: relative;
+      padding-top: 52%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+
+  &__slider {
+    width: 35%;
+    background-color: #39312f;
+  }
+}
+
+.testimonials-slider {
+  position: relative;
+
+  &__item {
+    margin-top: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-content {
+    width: 65%;
+    text-align: center;
+  }
+
+  &__photo {
+    display: flex;
+    justify-content: center;
+
+    .photo-wrap {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__person-name {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  &__person-text{
+    color: #fff;
+    line-height: 1.5em;
+  }
+}
+
+.slider-toggles {
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrapper-slide {
+  display: flex;
+  align-items: center;
+}
+
+.slick-dots {
+  display: flex;
+  
+  li {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    
+    button {
+    font-size: 0;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color .4s, border-color .4s;
+    outline: none;
+    
+  }
+  
+    &.slick-active {
+      button {
+      background-color: transparent;
+      border-color: #fff;
+      }
+    }
+  }
+}
